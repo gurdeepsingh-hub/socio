@@ -1,0 +1,44 @@
+@import "../../style.scss";
+
+.followers {
+  @include themify($themes) {
+    position: fixed;
+    width: 50vw;
+    height: 75vh;
+    z-index: 999;
+    top: 12.5%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    color: themed(hardtextcolor) !important;
+    border: 1px solid themed(softtextcolor);
+    border-radius: 10px;
+    background: themed(hardBg);
+    pointer-events: all;
+    gap: 10px;
+    cursor: auto;
+    .head {
+      font-size: 14px;
+      display: flex;
+    }
+    .users {
+      align-self: baseline;
+      margin-bottom: auto;
+      justify-items: baseline !important;
+      div {
+        display: flex;
+        align-content: flex-start;
+        gap: 10px;
+        padding: 20px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          color: themed(hardtextcolor);
+        }
+      }
+    }
+  }
+}

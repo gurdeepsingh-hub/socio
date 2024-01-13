@@ -1,0 +1,28 @@
+@import "../../style.scss";
+
+.DropList {
+  @include themify($themes) {
+    position: relative;
+    cursor: pointer;
+    span {
+    }
+    .drop-list {
+      position: absolute;
+      right: 2px;
+      width: max-content;
+      z-index: 9999;
+      background: themed(softBg);
+
+      border: 1.5px solid themed(hardtextcolor);
+      .drop-list-item {
+        color: themed(hardtextcolor);
+        cursor: pointer;
+        padding: 10px;
+        &:hover {
+          background: themed(hardBg);
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

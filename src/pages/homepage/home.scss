@@ -1,0 +1,12 @@
+@import "../../style.scss";
+
+.home {
+  @include themify($themes) {
+    padding: 20px 30px;
+    background-color: themed(softBg);
+    flex: 5;
+    @include mobile {
+      padding: 20px 10px;
+    }
+  }
+}

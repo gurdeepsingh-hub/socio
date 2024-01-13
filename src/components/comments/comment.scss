@@ -1,0 +1,80 @@
+@import "../../style.scss";
+
+.comments {
+  @include themify($themes) {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .write {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 20px;
+      justify-content: space-between;
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      input {
+        width: 100%;
+        padding: 5px;
+        background: transparent;
+        border: themed(borderColor) solid 1px;
+        border-radius: 4px;
+        color: themed(hardtextcolor);
+      }
+      button {
+        border: none;
+        background-color: #5271ff;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+    }
+    .comment {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-items: start;
+        gap: 5px;
+        .usrname {
+          font-size: 16px;
+          font-weight: 500;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .time {
+        min-width: 65px;
+        padding: 5px;
+        font-size: 12px;
+        color: themed(softtextcolor);
+        align-self: center;
+        margin-left: auto;
+      }
+      .deleteComment {
+        align-self: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

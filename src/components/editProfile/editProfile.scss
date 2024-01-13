@@ -1,0 +1,107 @@
+@import "../../style.scss";
+
+.editProfile {
+  @include themify($themes) {
+    background: themed(softBg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    .heading {
+      color: themed(hardtextcolor);
+      padding: 10px;
+      h1 {
+        font-weight: 350;
+      }
+    }
+    .container {
+      margin: 30px;
+      width: 100%;
+      height: max-content;
+      background: themed(hardBg);
+      border-radius: 15px;
+      form {
+        padding-inline: 20px;
+        padding-block: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-around;
+        .pp {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            padding: 20px;
+            object-fit: cover;
+            cursor: pointer;
+          }
+          button {
+            position: absolute;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            bottom: 10px;
+
+            right: calc(50% - 50px);
+          }
+        }
+        div {
+          input,
+          textarea,
+          select {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid themed(borderColor);
+            color: themed(hardtextcolor);
+            font-size: large;
+            width: 100%;
+            &:hover,
+            &:focus {
+              border-bottom: 1px solid #5761ff;
+              outline: none;
+            }
+            option {
+              background: themed(softBg);
+              border: none;
+            }
+          }
+          label.relation {
+            background: transparent;
+            border: none;
+            color: themed(hardtextcolor);
+            font-size: large;
+          }
+        }
+        .names,
+        .passwords {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          justify-content: space-between;
+          div {
+            width: 100%;
+          }
+        }
+        button {
+          width: fit-content;
+          padding-inline: 20px;
+          padding-block: 5px;
+          border: none;
+          background: #5761ff;
+          color: white;
+          font-weight: 500;
+          font-size: 16px;
+          border-radius: 5px;
+          text-align: center;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
