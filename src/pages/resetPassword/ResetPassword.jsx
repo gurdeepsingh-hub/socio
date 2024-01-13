@@ -41,24 +41,24 @@ const ResetPassword = () => {
   //Api Calls
   const forgotApiCall = async (e) => {
     e.preventDefault();
-    try {
-      setError(false);
-      setFetching(true);
-      const res = await axios.post("/auth/forgot-password", {
-        Email: email.current.value,
-      });
-      setFetching(false);
-      setSucess(true);
-      setTimeout(() => {
-        console.log("res", res);
-        if (res.status == 201) {
-          return navigate("/");
-        }
-      }, 2000);
-    } catch (err) {
-      setFetching(false);
-      setError(err);
-    }
+    // try {
+    //   setError(false);
+    //   setFetching(true);
+    //   const res = await axios.post("/auth/forgot-password", {
+    //     Email: email.current.value,
+    //   });
+    //   setFetching(false);
+    //   setSucess(true);
+    //   setTimeout(() => {
+    //     console.log("res", res);
+    //     if (res.status == 201) {
+    //       return navigate("/");
+    //     }
+    //   }, 2000);
+    // } catch (err) {
+    //   setFetching(false);
+    //   setError(err);
+    // }
   };
 
   return (
